@@ -1,17 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-11T12:40:41 IST" name="Default suite" finished-at="2026-03-11T12:40:45 IST" duration-ms="3974">
+  <suite started-at="2026-03-12T17:29:38 IST" name="Default suite" finished-at="2026-03-12T17:29:43 IST" duration-ms="5062">
     <groups>
     </groups>
-    <test started-at="2026-03-11T12:40:41 IST" name="Default test" finished-at="2026-03-11T12:40:45 IST" duration-ms="3974">
-      <class name="com.api.tests.FinalLoginAPI">
-        <test-method signature="LoginTest()[pri:0, instance:com.api.tests.FinalLoginAPI@acb0951]" started-at="2026-03-11T12:40:41 IST" name="LoginTest" description="Verify If Login API is working or not" finished-at="2026-03-11T12:40:45 IST" duration-ms="3872" status="PASS">
+    <test started-at="2026-03-12T17:29:38 IST" name="Default test" finished-at="2026-03-12T17:29:43 IST" duration-ms="5062">
+      <class name="com.api.tests.GetProfileRequestTest">
+        <test-method signature="getProfileInfo()[pri:0, instance:com.api.tests.GetProfileRequestTest@4f83df68]" started-at="2026-03-12T17:29:38 IST" name="getProfileInfo" description="Get profile request api test" finished-at="2026-03-12T17:29:43 IST" duration-ms="4952" status="FAIL">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "timestamp" (class com.api.models.responses.LoginResponse), not marked as ignorable (6 known properties: "username", "token", "type", "id", "email", "roles"])
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 15] (through reference chain: com.api.models.responses.LoginResponse["timestamp"])]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "timestamp" (class com.api.models.responses.LoginResponse), not marked as ignorable (6 known properties: "username", "token", "type", "id", "email", "roles"])
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 15] (through reference chain: com.api.models.responses.LoginResponse["timestamp"])
+at io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.java:30)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.mapping.Jackson2Mapper.deserialize(Jackson2Mapper.groovy:58)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.mapping.ObjectMapping.parseWithJackson2(ObjectMapping.groovy:269)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:58)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:233)
+at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:174)
+at com.api.tests.GetProfileRequestTest.getProfileInfo(GetProfileRequestTest.java:21)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "timestamp" (class com.api.models.responses.LoginResponse), not marked as ignorable (6 known properties: "username", "token", "type", "id", "email", "roles"])
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 15] (through reference chain: com.api.models.responses.LoginResponse["timestamp"])
+at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1153)
+at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2241)
+at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1821)
+at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1799)
+at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:316)
+at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177)
+at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)
+at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4917)
+at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3860)
+at io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.java:28)
+... 36 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoginTest -->
-      </class> <!-- com.api.tests.FinalLoginAPI -->
+        </test-method> <!-- getProfileInfo -->
+      </class> <!-- com.api.tests.GetProfileRequestTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

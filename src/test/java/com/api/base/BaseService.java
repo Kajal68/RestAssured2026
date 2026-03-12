@@ -17,12 +17,12 @@ public class BaseService { // wrapper for rest assured
 	// handling the response
 	static Properties prop = new Properties();
 
-	private static String BASE_URL = ""; // "http://64.227.160.186:8080";
+	private static String BASE_URL; // "http://64.227.160.186:8080";
 	private RequestSpecification reqspec;
 
 	static {
 		try (FileInputStream fis = new FileInputStream(
-				System.getProperty("user.dir") + "\\src\\main\\resources\\configFiles\\config.properties")) {
+				System.getProperty("user.dir") + "\\src\\test\\resources\\configFiles\\config.properties")) {
 			prop.load(fis);
 			BASE_URL = prop.getProperty("base_uri");
 		} catch (IOException e) {
@@ -39,5 +39,15 @@ public class BaseService { // wrapper for rest assured
 	protected Response postRequest(Object payload, String endpoint) {
 
 		return reqspec.contentType(ContentType.JSON).body(payload).post(endpoint);
+	}
+
+	protected Response putRequest(Object payload, String endpoint) {
+
+		return reqspec.contentType(ContentType.JSON).body(payload).put(endpoint);
+	}
+
+	protected Response getRequest(String endpoint) {
+
+		return reqspec.get(endpoint);
 	}
 }

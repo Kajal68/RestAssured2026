@@ -1,6 +1,7 @@
 package com.api.tests;
 
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.api.base.AuthService;
@@ -9,6 +10,7 @@ import com.api.models.responses.LoginResponse;
 
 import io.restassured.response.Response;
 
+@Listeners(com.api.listener.TestListener.class)
 public class FinalLoginAPI extends AuthService {
 
 	String user = getProperty("username");

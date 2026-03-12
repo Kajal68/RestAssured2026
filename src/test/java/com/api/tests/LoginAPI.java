@@ -1,12 +1,14 @@
 package com.api.tests;
 
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
+@Listeners(com.api.listener.TestListener.class)
 public class LoginAPI {
 
 	// practice code: 1

@@ -2,7 +2,12 @@ package com.api.models.responses;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+//@JsonIgnoreProperties(ignoreUnknown = true)
 public class LoginResponse {
+
 	private String token;
 	private String type;
 	private int id;

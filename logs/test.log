@@ -1,0 +1,9 @@
+15:50:44.080 [main] INFO  com.api.listener.TestListener - PassedLoginTest
+15:51:30.078 [main] INFO  com.api.listener.TestListener - PassedLoginTest
+17:00:50.164 [main] INFO  com.api.listener.TestListener - Passed!!!!LoginTest
+17:29:11.575 [main] INFO  com.api.listener.TestListener - Passed!!!!getProfileInfo
+17:41:00.071 [main] INFO  com.api.listener.TestListener - Passed!!!!testGetUsers
+17:54:20.262 [main] INFO  com.api.listener.TestListener - Passed!!!!testGetUsers
+18:10:42.415 [main] INFO  com.api.listener.TestListener - Passed!!!!testGetUsers
+18:15:51.849 [main] INFO  com.api.listener.TestListener - Passed!!!!getProfileInfo
+18:15:53.371 [main] INFO  com.api.listener.TestListener - Passed!!!!testGetUsers
