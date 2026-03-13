@@ -5,6 +5,7 @@ com\api\tests\FinalLoginAPI.class
 com\api\tests\GetProfileRequestTest.class
 com\api\tests\SignUpAPI.class
 restCode\ExampleCode.class
+com\api\base\BaseTeest.class
 com\api\listener\TestListener.class
 com\api\tests\ForgotPassword.class
 com\api\models\requests\LoginRequest.class

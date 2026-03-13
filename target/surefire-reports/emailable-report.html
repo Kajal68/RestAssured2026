@@ -8,12 +8,72 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Surefire suite</th></tr>
-<tr><td><a href="#t0">Surefire test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">7,172</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">1,877</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.api.tests.GetProfileRequestTest</td><td><a href="#m0">getProfileInfo</a></td><td rowspan="1">1773319546267</td><td rowspan="1">5570</td></tr><tr class="passedodd"><td rowspan="1">restAssured.SimpleTest</td><td><a href="#m1">testGetUsers</a></td><td rowspan="1">1773319551861</td><td rowspan="1">1508</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.api.tests.FinalLoginAPI</td><td><a href="#m0">LoginTest</a></td><td rowspan="1">1773383529117</td><td rowspan="1">1761</td></tr></tbody>
 </table>
-<h2>Surefire test</h2><h3 id="m0">com.api.tests.GetProfileRequestTest#getProfileInfo</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">restAssured.SimpleTest#testGetUsers</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">com.api.tests.FinalLoginAPI#LoginTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.net.MalformedURLException: no protocol: ${BASE_URL:http://64.227.160.186:8080}
+	at java.base/java.net.URL.&lt;init&gt;(URL.java:735)
+	at java.base/java.net.URL.&lt;init&gt;(URL.java:630)
+	at java.base/java.net.URL.&lt;init&gt;(URL.java:566)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.getTargetURI(RequestSpecificationImpl.groovy:1678)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.partiallyApplyPathParams(RequestSpecificationImpl.groovy:1819)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.newFilterContext(RequestSpecificationImpl.groovy:1176)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1789)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1797)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.invoke(TransformMetaMethod.java:59)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass$1.invoke(ClosureMetaClass.java:217)
+	at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.doMethodInvoke(TransformMetaMethod.java:66)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:318)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl$_post_closure2.doCall(RequestSpecificationImpl.groovy:180)
+	at io.restassured.internal.RequestSpecificationImpl$_post_closure2.doCall(RequestSpecificationImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:270)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.Closure.call(Closure.java:471)
+	at org.codehaus.groovy.runtime.ConvertedClosure.invokeCustom(ConvertedClosure.java:54)
+	at org.codehaus.groovy.runtime.ConversionHandler.invoke(ConversionHandler.java:114)
+	at jdk.proxy1/jdk.proxy1.$Proxy26.get(Unknown Source)
+	at io.restassured.internal.assertbridge.GroovyAssertBridge.runWithUnwrap(GroovyAssertBridge.java:46)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy:179)
+	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy)
+	at com.api.base.BaseService.postRequest(BaseService.java:42)
+	at com.api.base.AuthService.login(AuthService.java:21)
+	at com.api.tests.FinalLoginAPI.LoginTest(FinalLoginAPI.java:24)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 50 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
