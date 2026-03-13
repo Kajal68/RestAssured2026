@@ -24,7 +24,7 @@ public class BaseService { // wrapper for rest assured
 		try (FileInputStream fis = new FileInputStream(
 				System.getProperty("user.dir") + "\\src\\test\\resources\\configFiles\\config.properties")) {
 			prop.load(fis);
-			BASE_URL = prop.getProperty("base_uri");
+			BASE_URL = prop.getProperty("base_uri").replace("${BASE_URL:", "").replace("}", System.getenv("BASE_URL") != null ? System.getenv("BASE_URL") : "").replace("${USERNAME:", "").replace("}", System.getenv("USERNAME") != null ? System.getenv("USERNAME") : "").replace("${PASSWORD:", "").replace("}", System.getenv("PASSWORD") != null ? System.getenv("PASSWORD") : "");
 		} catch (IOException e) {
 			throw new RuntimeException("Failed to load properties file", e);
 		}
@@ -32,7 +32,8 @@ public class BaseService { // wrapper for rest assured
 
 	public BaseService() {
 
-		reqspec = given().baseUri(prop.getProperty("base_uri"));
+		String effectiveBaseUri = System.getenv("BASE_URL") != null ? System.getenv("BASE_URL") : prop.getProperty("base_uri");
+		reqspec = given().baseUri(effectiveBaseUri);
 
 	}
 
